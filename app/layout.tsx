@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import { useState } from 'react';
 import { SidebarProvider } from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/app-sidebar"
@@ -13,18 +12,18 @@ import { Button } from "@/components/ui/button"
 import { LayoutDashboard } from "lucide-react"
 
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+function Layout({ children }: { children: React.ReactNode }) {
   const [openSiderBar, setOpenSideBar] = useState(false);
-
+  
   const toggleSideBar = () => {
     setOpenSideBar(!openSiderBar)
   };
-
+ 
   return (
     <html lang="en">
         <body>
         <SidebarProvider defaultOpen={false} open={openSiderBar}>
-          <div className="h-screen flex flex-col overflow-hidden w-full">
+          <div className="h-screen flex flex-col w-full">
             <header className="bg-[#334a94] p-2" style={{ paddingLeft: openSiderBar ? '16rem' : '3rem' }}>   
               <NavigationMenu>
                 <NavigationMenuList className="flex items-center">
@@ -40,17 +39,22 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 
                 </NavigationMenu>
             </header>
-          <div className="{`${openSiderBar ? 'w-64' : 'w-3'} transition-all duration-300 overflow-hidden`}">
-            <AppSidebar />
-            <main className={`flex-1 overflow-auto p-4 bg-gray-50 transition-all duration-300 ${
-                openSiderBar ? 'ml-64' : 'ml-10'
-              }`}>
-              {children}
-            </main>     
-          </div>
+            <div className="flex flex-1">
+              <div className={`${openSiderBar ? 'w-64' : 'w-3'} transition-all duration-300 overflow-auto`}>
+                <AppSidebar />    
+              </div>
+              <main className={`flex-1 overflow-auto p-4 bg-gray-50 transition-all duration-300 ${
+                    openSiderBar ? 'ml-64' : 'ml-10'
+                  }`}>
+                  {children}
+              </main> 
+            </div>
+          
           </div>
           </SidebarProvider>
         </body>
     </html>
   )
 }
+
+export default Layout;

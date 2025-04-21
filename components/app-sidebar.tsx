@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import { ClipboardMinus, HandCoins, LayoutDashboard, Settings } from "lucide-react"
 
 import {
@@ -12,12 +14,12 @@ import {
 const items = [
   {
     title: "Dashboard",
-    url: "#",
+    url: "/",
     icon: LayoutDashboard,
   },
   {
     title: "Transactions",
-    url: "#",
+    url: "/transactions",
     icon: HandCoins,
   },
   {
@@ -33,13 +35,17 @@ const items = [
 ]
 
 export function AppSidebar() {
+  const [selectedIndex, setSelectedIndex] = useState<number>(-1);
+
+  const sidebarMenuChange = (index:number) =>  setSelectedIndex(index);
+
   return (
     <Sidebar collapsible="icon">
       <SidebarContent>
         <SidebarMenu>
-          {items.map((item) => (
+          {items.map((item, index) => (
             <SidebarMenuItem key={item.title}>
-              <SidebarMenuButton asChild>
+              <SidebarMenuButton onClick={() => sidebarMenuChange(index)} asChild isActive={selectedIndex === index}>
                 <a href={item.url}>
                   <item.icon />
                   <span>{item.title}</span>

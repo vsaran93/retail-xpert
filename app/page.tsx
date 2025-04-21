@@ -1,5 +1,5 @@
 
 
 export default function Home() {
-  return (<h1>hello</h1>);
+  return (<h1>Welcome to Dashboard</h1>);
 }
