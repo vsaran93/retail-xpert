@@ -44,7 +44,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                 <AppSidebar />    
               </div>
               <main className={`flex-1 overflow-auto p-4 bg-gray-50 transition-all duration-300 ${
-                    openSiderBar ? 'ml-64' : 'ml-10'
+                    openSiderBar ? '0' : 'ml-10'
                   }`}>
                   {children}
               </main> 

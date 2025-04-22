@@ -17,7 +17,7 @@ const Transaction = () => {
                 </div>
                 <div className="grid grid-cols-3 gap-4 items-end min-h-[250px]">
                     <div className="flex flex-col">
-                        <Card className="min-h-[200px] overflow-auto flex flex-col items-center justify-center bg-muted hover:bg-muted/70 cursor-pointer">
+                        <Card className="min-h-[200px] overflow-auto flex flex-col items-center justify-center bg-muted hover:bg-muted/70 cursor-pointer rounded-md">
                             <CardContent className="flex flex-col items-center justify-center text-md gap-2 font-semibold">
                                 <Plus />
                                 <p>Add Customer</p>
@@ -25,7 +25,7 @@ const Transaction = () => {
                         </Card>
                     </div>
                     <div className="col-span-2 flex flex-col">
-                        <Card id="summaryCard" className=" overflow-auto min-h-[200px]">
+                        <Card id="summaryCard" className=" overflow-auto min-h-[200px] rounded-md">
                             <CardContent className="grid grid-cols-2 gap-4 pl-4 pr-4 text-sm font-medium">
                                 {/* Column 1 */}
                                 <div className="space-y-1">
@@ -73,8 +73,8 @@ const Transaction = () => {
                                     <div><Card className="rounded-md hover:bg-muted/70 cursor-pointer"><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">1</CardContent></Card></div>
                                     <div><Card className="rounded-md hover:bg-muted/70 cursor-pointer"><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">2</CardContent></Card></div>
                                     <div><Card className="rounded-md hover:bg-muted/70 cursor-pointer"><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">3</CardContent></Card></div>
-                                    <div><Card className="rounded-md hover:bg-muted/70 cursor-pointer"><CardContent className="flex items-center justify-center h-2 p-0">
-                                        <Delete size={21}/>
+                                    <div><Card className="rounded-md bg-red-500 hover:bg-red-700 cursor-pointer"><CardContent className="flex items-center justify-center h-2 p-0">
+                                        <Delete size={21} color="white"/>
                                     </CardContent></Card></div>
                                     <div><Card className="rounded-md hover:bg-muted/70 cursor-pointer"><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">4</CardContent></Card></div>
                                     <div><Card className="rounded-md hover:bg-muted/70 cursor-pointer"><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">5</CardContent></Card></div>
@@ -118,11 +118,15 @@ const Transaction = () => {
                         </div>
                         <div className="flex flex-col items-center justify-center gap-1 p-4 rounded-md bg-muted hover:bg-muted/70 cursor-pointer transition text-sm font-medium w-full">
                             <Box size={22} />
-                            <span>Product</span>
+                            <span>Products</span>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-1 p-4 rounded-md bg-muted hover:bg-muted/70 cursor-pointer transition text-sm font-medium w-full">
                             <Percent size={22} />
                             <span>VAT</span>
+                        </div>
+                        <div className="flex flex-col items-center justify-center gap-1 p-4 rounded-md bg-muted hover:bg-muted/70 cursor-pointer transition text-sm font-medium w-full">
+                            <Percent size={22} />
+                            <span>No VAT</span>
                         </div>
                         </CardContent>
                     </Card>
