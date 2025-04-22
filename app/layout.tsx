@@ -24,7 +24,7 @@ function Layout({ children }: { children: React.ReactNode }) {
         <body>
         <SidebarProvider defaultOpen={false} open={openSiderBar}>
           <div className="h-screen flex flex-col w-full">
-            <header className="bg-[#334a94] p-2" style={{ paddingLeft: openSiderBar ? '16rem' : '3rem' }}>   
+            <header className="bg-blue-500 p-2" style={{ paddingLeft: openSiderBar ? '16rem' : '3rem' }}>   
               <NavigationMenu>
                 <NavigationMenuList className="flex items-center">
                 <NavigationMenuItem>

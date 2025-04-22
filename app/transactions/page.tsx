@@ -17,7 +17,7 @@ const Transaction = () => {
                 </div>
                 <div className="grid grid-cols-3 gap-4 items-end min-h-[250px]">
                     <div className="flex flex-col">
-                        <Card className="min-h-[200px] overflow-auto flex flex-col items-center justify-center">
+                        <Card className="min-h-[200px] overflow-auto flex flex-col items-center justify-center bg-muted hover:bg-muted/70 cursor-pointer">
                             <CardContent className="flex flex-col items-center justify-center text-md gap-2 font-semibold">
                                 <Plus />
                                 <p>Add Customer</p>
@@ -69,53 +69,63 @@ const Transaction = () => {
                         <div className="grid w-full max-w-sm items-center gap-1.5">
                             <Label htmlFor="search">Search or Enter Quantity</Label>
                             <Input type="text" id="search" placeholder="" />
-                            <div className="grid grid-cols-4 gap-4">
-                                    <div><Card><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">1</CardContent></Card></div>
-                                    <div><Card><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">2</CardContent></Card></div>
-                                    <div><Card><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">3</CardContent></Card></div>
-                                    <div><Card><CardContent className="flex items-center justify-center h-2 p-0">
+                            <div className="grid grid-cols-4 gap-2 mt-5">
+                                    <div><Card className="rounded-md hover:bg-muted/70 cursor-pointer"><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">1</CardContent></Card></div>
+                                    <div><Card className="rounded-md hover:bg-muted/70 cursor-pointer"><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">2</CardContent></Card></div>
+                                    <div><Card className="rounded-md hover:bg-muted/70 cursor-pointer"><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">3</CardContent></Card></div>
+                                    <div><Card className="rounded-md hover:bg-muted/70 cursor-pointer"><CardContent className="flex items-center justify-center h-2 p-0">
                                         <Delete size={21}/>
                                     </CardContent></Card></div>
-                                    <div><Card><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">4</CardContent></Card></div>
-                                    <div><Card><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">5</CardContent></Card></div>
-                                    <div><Card><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">6</CardContent></Card></div>
-                                    <div><Card><CardContent className="flex items-center justify-center h-2 p-0">
+                                    <div><Card className="rounded-md hover:bg-muted/70 cursor-pointer"><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">4</CardContent></Card></div>
+                                    <div><Card className="rounded-md hover:bg-muted/70 cursor-pointer"><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">5</CardContent></Card></div>
+                                    <div><Card className="rounded-md hover:bg-muted/70 cursor-pointer"><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">6</CardContent></Card></div>
+                                    <div><Card className="rounded-md hover:bg-muted/70 cursor-pointer"><CardContent className="flex items-center justify-center h-2 p-0">
                                         <Diff size={21}/>
                                     </CardContent></Card></div>
-                                    <div><Card><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">7</CardContent></Card></div>
-                                    <div><Card><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">8</CardContent></Card></div>
-                                    <div><Card><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">9</CardContent></Card></div>
-                                    <div><Card><CardContent className="flex items-center justify-center h-2 p-0">
+                                    <div><Card className="rounded-md hover:bg-muted/70 cursor-pointer"><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">7</CardContent></Card></div>
+                                    <div><Card className="rounded-md hover:bg-muted/70 cursor-pointer"><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">8</CardContent></Card></div>
+                                    <div><Card className="rounded-md hover:bg-muted/70 cursor-pointer"><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">9</CardContent></Card></div>
+                                    <div><Card className="rounded-md hover:bg-muted/70 cursor-pointer"><CardContent className="flex items-center justify-center h-2 p-0">
                                         <Asterisk size={21}/>
                                     </CardContent></Card></div>
-                                    <div className="col-span-2"><Card><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">0</CardContent></Card></div>
-                                    <div><Card><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">.</CardContent></Card></div>
-                                    <div><Card><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">abc</CardContent></Card></div>
+                                    <div className="col-span-2"><Card className="rounded-md hover:bg-muted/70 cursor-pointer"><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">0</CardContent></Card></div>
+                                    <div><Card className="rounded-md hover:bg-muted/70 cursor-pointer"><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">.</CardContent></Card></div>
+                                    <div><Card className="rounded-md hover:bg-muted/70 cursor-pointer"><CardContent className="flex items-center justify-center h-2 text-xl font-semibold">abc</CardContent></Card></div>
                             </div>
                                 <div className="grid">
-                                <Card><CardContent className="flex items-center justify-center h-2 p-0">
-                                        <CornerDownLeft size={21}/>
+                                <Card className="rounded-md bg-sky-500/75 hover:bg-sky-700 cursor-pointer"><CardContent className="flex items-center justify-center h-2 p-0">
+                                        <CornerDownLeft size={21} color="white" />
                                     </CardContent></Card>
                                 </div>
                         </div>
-                        <div id="pay-options" className="grid grid-cols-3 gap-4 mt-auto">
-                            <Card><CardContent><CreditCard /></CardContent></Card>
-                            <Card><CardContent><Banknote /></CardContent></Card>
-                            <Card><CardContent><Ticket /></CardContent></Card>
+                        <div id="pay-options" className="grid grid-cols-3 gap-2 mt-auto">
+                            <Card className="bg-sky-500/75 rounded-sm  hover:bg-sky-700 cursor-pointer"><CardContent className="flex items-center justify-center"><CreditCard color="white" /></CardContent></Card>
+                            <Card className="bg-sky-500/75 rounded-sm  hover:bg-sky-700 cursor-pointer"><CardContent className="flex items-center justify-center"><Banknote color="white"/></CardContent></Card>
+                            <Card className="bg-sky-500/75 rounded-sm  hover:bg-sky-700 cursor-pointer"><CardContent className="flex items-center justify-center"><Ticket color="white"/></CardContent></Card>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <div>
-                        <Card className="w-25">
-                            <CardContent className="flex-col items-center justify-center">
-                                <div className="w-25 py-2"><Codesandbox />Actions</div>
-                                <div className="w-25 py-2"><Tag/>Discount</div>
-                                <div className="w-25 py-2"><Box />Product</div>
-                                <div className="w-25 py-2"><Percent />VAT</div>
-                            </CardContent>
-                        </Card>
-                    </div>
+                    <Card className="w-full shadow-sm">
+                        <CardContent className="flex flex-col gap-3 p-4">
+                        <div className="flex flex-col items-center justify-center gap-1 p-4 rounded-md bg-muted hover:bg-muted/70 cursor-pointer transition text-sm font-medium w-full">
+                            <Codesandbox size={22} />
+                            <span>Actions</span>
+                        </div>
+                        <div className="flex flex-col items-center justify-center gap-1 p-4 rounded-md bg-muted hover:bg-muted/70 cursor-pointer transition text-sm font-medium w-full">
+                            <Tag size={22} />
+                            <span>Discount</span>
+                        </div>
+                        <div className="flex flex-col items-center justify-center gap-1 p-4 rounded-md bg-muted hover:bg-muted/70 cursor-pointer transition text-sm font-medium w-full">
+                            <Box size={22} />
+                            <span>Product</span>
+                        </div>
+                        <div className="flex flex-col items-center justify-center gap-1 p-4 rounded-md bg-muted hover:bg-muted/70 cursor-pointer transition text-sm font-medium w-full">
+                            <Percent size={22} />
+                            <span>VAT</span>
+                        </div>
+                        </CardContent>
+                    </Card>
                 </div>
             </div>
         </div>
