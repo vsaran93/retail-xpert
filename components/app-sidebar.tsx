@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { ClipboardMinus, HandCoins, LayoutDashboard, Settings } from "lucide-react"
+import { ClipboardMinus, HandCoins, LayoutDashboard, Settings, Package } from "lucide-react"
 
 import {
   Sidebar,
@@ -23,8 +23,13 @@ const items = [
     icon: HandCoins,
   },
   {
+    title: "Inventory",
+    url: "/inventory",
+    icon: Package,
+  },
+  {
     title: "Reports",
-    url: "#",
+    url: "/reports",
     icon: ClipboardMinus,
   },
   {

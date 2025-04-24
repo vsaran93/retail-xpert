@@ -3,7 +3,6 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Asterisk, Box, Codesandbox, CornerDownLeft, Delete, Diff, Percent, Plus, Tag, CreditCard, Banknote, Ticket } from "lucide-react"
 import Lines from "./line"
-import { Button } from "@/components/ui/button"
 
 const Transaction = () => {
     console.log("testing trans")
