@@ -25,16 +25,24 @@ function Layout({ children }: { children: React.ReactNode }) {
         <SidebarProvider defaultOpen={false} open={openSiderBar}>
           <div className="h-screen flex flex-col w-full">
             <header className="bg-blue-500 p-2" style={{ paddingLeft: openSiderBar ? '16rem' : '3rem' }}>   
-              <NavigationMenu>
-                <NavigationMenuList className="flex items-center">
-                <NavigationMenuItem>
-                    <Button onClick={toggleSideBar} variant="ghost" className="text-white">
-                        <LayoutDashboard />
-                    </Button>
-                  </NavigationMenuItem>
+              <NavigationMenu className='w-full'>
+                <NavigationMenuList className="flex items-center justify-between w-full">
+                <div className='flex items-center'>
+                  <NavigationMenuItem>
+                      <Button onClick={toggleSideBar} variant="ghost" className="text-white">
+                          <LayoutDashboard />
+                      </Button>
+                    </NavigationMenuItem>
                   <NavigationMenuItem className="text-white ml-4">
                     Retail-Xpert
                   </NavigationMenuItem>
+                </div>
+                <div className='flex items-center'>
+                  <NavigationMenuItem className="text-white ml-4">
+                    Login
+                  </NavigationMenuItem>
+                </div>
+                  
                 </NavigationMenuList>
                 
                 </NavigationMenu>
