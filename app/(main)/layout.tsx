@@ -7,9 +7,10 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu"
-import './globals.css'
+import '../globals.css'
 import { Button } from "@/components/ui/button"
 import { LayoutDashboard, UserRound } from "lucide-react"
+import Link from 'next/link';
 
 
 function Layout({ children }: { children: React.ReactNode }) {
@@ -41,7 +42,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                     </NavigationMenu>
                   </div>
                   <div className='flex items-center'>
-                    <Button className="text-white" variant="ghost"><UserRound />Login</Button>
+                    <Link className='flex items-center text-white gap-2 mt-2' href="/auth/login"><UserRound /><span>Login</span></Link>
                   </div>
               </div>  
               
