@@ -1,4 +1,5 @@
 "use client"
+import '../../globals.css'
 
 function Layout({ children }: {children: React.ReactNode}) {
     return (
